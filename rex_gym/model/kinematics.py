@@ -3,12 +3,12 @@ import numpy as np
 
 class Kinematics:
     def __init__(self):
-        self._l = 0.23
-        self._w = 0.075
-        self._hip = 0.055
-        self._leg = 0.10652
-        self._foot = 0.145
-        self.y_dist = 0.185
+        self._l = 0.5
+        self._w = 0.2
+        self._hip = 0.75
+        self._leg = 0.28
+        self._foot = 0.3
+        self.y_dist = 0.4
         self.x_dist = self._l
         self.height = 0.2
         # frame vectors
