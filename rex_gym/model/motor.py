@@ -3,7 +3,7 @@
 import numpy as np
 
 # TODO: set params to match AK10-9
-VOLTAGE_CLIPPING = 50
+VOLTAGE_CLIPPING = 40
 # TODO: Clamp the pwm signal instead of the OBSERVED_TORQUE_LIMIT.
 OBSERVED_TORQUE_LIMIT = 54.0
 MOTOR_VOLTAGE = 44.0

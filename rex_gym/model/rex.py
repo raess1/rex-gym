@@ -8,8 +8,8 @@ import numpy as np
 from . import motor, terrain, mark_constants, rex_constants
 from ..util import pybullet_data
 
-INIT_RACK_POSITION = [1, 0, 0]
-INIT_ORIENTATION = [0, 1, 0, 0]
+INIT_RACK_POSITION = [0, 1, 1]
+INIT_ORIENTATION = [1, 2, 0, 0]
 OVERHEAT_SHUTDOWN_TORQUE = 50.0
 OVERHEAT_SHUTDOWN_TIME = 1.0
 
@@ -52,14 +52,14 @@ class Rex:
                  self_collision_enabled=False,
                  motor_velocity_limit=np.inf,
                  pd_control_enabled=False,
-                 accurate_motor_model_enabled=False,
+                 accurate_motor_model_enabled=True,
                  remove_default_joint_damping=False,
                  motor_kp=1.0,
                  motor_kd=0.02,
                  pd_latency=0.0,
                  control_latency=0.0,
                  observation_noise_stdev=SENSOR_NOISE_STDDEV,
-                 torque_control_enabled=False,
+                 torque_control_enabled=True,
                  motor_overheat_protection=False,
                  on_rack=False,
                  pose_id='stand',
