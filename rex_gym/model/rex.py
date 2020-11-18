@@ -8,8 +8,8 @@ import numpy as np
 from . import motor, terrain, mark_constants, rex_constants
 from ..util import pybullet_data
 
-INIT_RACK_POSITION = [0, 0, 1]
-INIT_ORIENTATION = [0, 0, 0, 1]
+INIT_RACK_POSITION = [1, 0, 0]
+INIT_ORIENTATION = [0, 0, 0, 0.1]
 OVERHEAT_SHUTDOWN_TORQUE = 35.0
 OVERHEAT_SHUTDOWN_TIME = 1.0
 

@@ -75,8 +75,8 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
     """
         super(RexStandupEnv,
               self).__init__(urdf_version=urdf_version,
-                             accurate_motor_model_enabled=True,
-                             motor_overheat_protection=True,
+                             accurate_motor_model_enabled=False,
+                             motor_overheat_protection=False,
                              hard_reset=False,
                              motor_kp=motor_kp,
                              motor_kd=motor_kd,
