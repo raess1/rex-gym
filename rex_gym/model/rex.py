@@ -52,7 +52,7 @@ class Rex:
                  self_collision_enabled=False,
                  motor_velocity_limit=np.inf,
                  pd_control_enabled=True,
-                 accurate_motor_model_enabled=True,
+                 accurate_motor_model_enabled=False,
                  remove_default_joint_damping=False,
                  motor_kp=1.0,
                  motor_kd=0.02,

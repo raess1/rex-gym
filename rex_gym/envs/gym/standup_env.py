@@ -41,7 +41,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
                  num_steps_to_log=1000,
                  env_randomizer=None,
                  log_path=None,
-                 signal_type="ol",
+                 signal_type="ik",
                  terrain_type="plane",
                  terrain_id=None,
                  mark='base'):
@@ -150,7 +150,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
 
     def _reward(self):
         # target position
-        t_pos = [0.0, 0.0, 0.21]
+        t_pos = [0.0, 0.0, 0.43]
 
         current_base_position = self.rex.GetBasePosition()
 
