@@ -53,7 +53,7 @@ class RexGymEnv(gym.Env):
                  debug=True,
                  urdf_root=pybullet_data.getDataPath(),
                  urdf_version=None,
-                 distance_weight=0.5,
+                 distance_weight=1.0,
                  energy_weight=0.0005,
                  shake_weight=0.005,
                  drift_weight=2.0,
@@ -61,7 +61,7 @@ class RexGymEnv(gym.Env):
                  observation_noise_stdev=SENSOR_NOISE_STDDEV,
                  self_collision_enabled=False,
                  motor_velocity_limit=np.inf,
-                 pd_control_enabled=False,
+                 pd_control_enabled=True,
                  leg_model_enabled=True,
                  accurate_motor_model_enabled=True,
                  remove_default_joint_damping=False,
@@ -194,7 +194,7 @@ class RexGymEnv(gym.Env):
         self._is_render = render
         self._is_debug = debug
         self._last_base_position = [0, 0, 0]
-        self._last_base_orientation = [0, 0, 0, 1]
+        self._last_base_orientation = [0, 0, 0, 3]
         self._distance_weight = distance_weight
         self._energy_weight = energy_weight
         self._drift_weight = drift_weight
