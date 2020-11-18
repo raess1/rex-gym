@@ -9,8 +9,8 @@ from . import motor, terrain, mark_constants, rex_constants
 from ..util import pybullet_data
 
 INIT_RACK_POSITION = [1, 0, 0]
-INIT_ORIENTATION = [0, 0, 0, 0.1]
-OVERHEAT_SHUTDOWN_TORQUE = 35.0
+INIT_ORIENTATION = [0, 0, 0, 1]
+OVERHEAT_SHUTDOWN_TORQUE = 54.0
 OVERHEAT_SHUTDOWN_TIME = 1.0
 
 LEG_POSITION = ["front_left", "front_right", "rear_left", "rear_right"]
@@ -51,7 +51,7 @@ class Rex:
                  action_repeat=1,
                  self_collision_enabled=False,
                  motor_velocity_limit=np.inf,
-                 pd_control_enabled=True,
+                 pd_control_enabled=False,
                  accurate_motor_model_enabled=False,
                  remove_default_joint_damping=False,
                  motor_kp=1.0,
@@ -59,7 +59,7 @@ class Rex:
                  pd_latency=0.0,
                  control_latency=0.0,
                  observation_noise_stdev=SENSOR_NOISE_STDDEV,
-                 torque_control_enabled=True,
+                 torque_control_enabled=False,
                  motor_overheat_protection=False,
                  on_rack=False,
                  pose_id='stand',
@@ -113,7 +113,7 @@ class Rex:
         self._motor_direction = [1 for _ in range(self.num_motors)]
         self._observed_motor_torques = np.zeros(self.num_motors)
         self._applied_motor_torques = np.zeros(self.num_motors)
-        self._max_force = 54
+        self._max_force = 10
         self._pd_latency = pd_latency
         self._control_latency = control_latency
         self._observation_noise_stdev = observation_noise_stdev

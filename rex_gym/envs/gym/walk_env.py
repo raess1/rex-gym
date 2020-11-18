@@ -29,7 +29,7 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
     is_terminating = False
 
     def __init__(self,
-                 debug=False,
+                 debug=True,
                  urdf_version=None,
                  control_time_step=0.005,
                  action_repeat=5,
@@ -44,7 +44,7 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
                  log_path=None,
                  target_position=None,
                  backwards=None,
-                 signal_type="ik",
+                 signal_type="ol",
                  terrain_type="plane",
                  terrain_id=None,
                  mark='base'):
@@ -78,8 +78,8 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
     """
         super(RexWalkEnv,
               self).__init__(urdf_version=urdf_version,
-                             accurate_motor_model_enabled=True,
-                             motor_overheat_protection=True,
+                             accurate_motor_model_enabled=False,
+                             motor_overheat_protection=False,
                              hard_reset=False,
                              motor_kp=motor_kp,
                              motor_kd=motor_kd,

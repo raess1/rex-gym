@@ -63,7 +63,7 @@ class Kinematics:
 
         translation = np.asmatrix([[1, 0, 0, x0],
                                    [0, 1, 0, y0],
-                                   [0, 0, 1, z0],
+                                   [0, 0, 0, z0],
                                    [0, 0, 0, 1]])
         rotation = self.get_Rxyz(roll, pitch, yaw)
         return rotation * translation
