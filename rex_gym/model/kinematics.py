@@ -10,7 +10,7 @@ class Kinematics:
         self._foot = 0.302314
         self.y_dist = 0.33377
         self.x_dist = self._l
-        self.height = 0.563867
+        self.height = 0.43867
         # frame vectors
         self._hip_front_right_v = np.array([self._l / 2, -self._w / 2, 0])
         self._hip_front_left_v = np.array([self._l / 2, self._w / 2, 0])

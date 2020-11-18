@@ -27,7 +27,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
     metadata = {"render.modes": ["human", "rgb_array"], "video.frames_per_second": 66}
 
     def __init__(self,
-                 debug=True,
+                 debug=False,
                  urdf_version=None,
                  control_time_step=0.005,
                  action_repeat=5,
@@ -37,7 +37,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
                  motor_kp=1.0,
                  motor_kd=0.02,
                  remove_default_joint_damping=False,
-                 render=False,
+                 render=True,
                  num_steps_to_log=1000,
                  env_randomizer=None,
                  log_path=None,
@@ -99,7 +99,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
         action_dim = 1
         action_high = np.array([0.1] * action_dim)
         self.action_space = spaces.Box(-action_high, action_high)
-        self._cam_dist = 2.0
+        self._cam_dist = 1.0
         self._cam_yaw = 30
         self._cam_pitch = -30
         if self._on_rack:
@@ -150,7 +150,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
 
     def _reward(self):
         # target position
-        t_pos = [0.0, 0.0, 0.63]
+        t_pos = [0.0, 0.0, 0.43]
 
         current_base_position = self.rex.GetBasePosition()
 

@@ -8,7 +8,7 @@
   <!-- Robot Body -->
   <link name="base_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.02003748539570111 -0.0071304890141553725 -0.154462365334068953"/>
+      <origin rpy="0 0 0" xyz="0.02003748539570111 -0.0071304890141553725 -0.114462365334068953"/>
       <mass value="5.0"/>
       <inertia ixx="0.19852" ixy="-0.000537" ixz="0.009898" iyy="2.089409" iyz="-0.000639" izz="2.11854"/>
     </inertial>
@@ -17,7 +17,7 @@
       <geometry>
         <mesh filename="stl/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="Black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -38,7 +38,7 @@
       <geometry>
         <mesh filename="stl/lf_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.194567 -0.048706 -0.003592"/>
@@ -58,7 +58,7 @@
       <geometry>
         <mesh filename="stl/lf_leg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252487 -0.079856 -0.003592"/>
@@ -78,7 +78,7 @@
       <geometry>
         <mesh filename="stl/p2_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252487 -0.185661 -0.003592"/>
@@ -98,7 +98,7 @@
       <geometry>
         <mesh filename="stl/lf_lowleg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252498 -0.180861 0.275581"/>
@@ -118,7 +118,7 @@
       <geometry>
         <mesh filename="stl/lf_foot_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.288226 -0.176661 0.559142"/>
@@ -173,7 +173,7 @@
       <geometry>
         <mesh filename="stl/rf_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.194567 0.061294 -0.003592"/>
@@ -193,7 +193,7 @@
       <geometry>
         <mesh filename="stl/rf_leg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252487 0.092444 -0.003592"/>
@@ -213,7 +213,7 @@
       <geometry>
         <mesh filename="stl/P4_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252487 0.198249 -0.003592"/>
@@ -233,7 +233,7 @@
       <geometry>
         <mesh filename="stl/rf_lowleg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.252476 0.193449 0.275581"/>
@@ -253,7 +253,7 @@
       <geometry>
         <mesh filename="stl/rf_foot_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.288204 0.175249 0.559142"/>
@@ -308,7 +308,7 @@
       <geometry>
         <mesh filename="stl/lh_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.180033 -0.048706 -0.003592"/>
@@ -328,7 +328,7 @@
       <geometry>
         <mesh filename="stl/lh_leg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237953 -0.079856 -0.003592"/>
@@ -348,7 +348,7 @@
       <geometry>
         <mesh filename="stl/p1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237953 -0.185661 -0.003592"/>
@@ -368,7 +368,7 @@
       <geometry>
         <mesh filename="stl/lh_lowleg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237942 -0.180861 0.275581"/>
@@ -388,7 +388,7 @@
       <geometry>
         <mesh filename="stl/lh_foot_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.202214 -0.176661 0.559142"/>
@@ -443,7 +443,7 @@
       <geometry>
         <mesh filename="stl/rh_hip_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.180033 0.061294 -0.003592"/>
@@ -463,7 +463,7 @@
       <geometry>
         <mesh filename="stl/rh_leg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237953 0.092444 -0.003592"/>
@@ -483,7 +483,7 @@
       <geometry>
         <mesh filename="stl/p3_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237953 0.198249 -0.003592"/>
@@ -503,7 +503,7 @@
       <geometry>
         <mesh filename="stl/rh_lowleg_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.237964 0.193449 0.275581"/>
@@ -523,7 +523,7 @@
       <geometry>
         <mesh filename="stl/rh_foot_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="silver"/>
+      <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.202235 0.175249 0.559142"/>
