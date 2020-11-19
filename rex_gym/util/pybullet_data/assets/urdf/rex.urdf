@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="rex" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <material name="silver">
-    <color rgba="0.700 0.700 0.700 1.000"/>
+  <material name="black">
+    <color rgba="0.6 0.6 0.6 1"/>
+  </material>
+    <material name="white">
+    <color rgba="(255, 255, 255, 1"/>
   </material>
   <!-- Params -->
   <!-- Macros -->
   <!-- Robot Body -->
   <link name="base_link">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.02003748539570111 -0.0071304890141553725 -0.114462365334068953"/>
-      <mass value="5.0"/>
+      <origin rpy="0 0 0" xyz="0.02003748539570111 -0.0071304890141553725 -0.15462365334068953"/>
+      <mass value="6.0"/>
       <inertia ixx="0.19852" ixy="-0.000537" ixz="0.009898" iyy="2.089409" iyz="-0.000639" izz="2.11854"/>
     </inertial>
     <visual>
@@ -17,7 +20,7 @@
       <geometry>
         <mesh filename="stl/base_link.stl" scale="0.001 0.001 0.001"/>
       </geometry>
-      <material name="Black"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>

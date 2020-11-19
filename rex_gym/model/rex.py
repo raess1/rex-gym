@@ -9,8 +9,8 @@ from . import motor, terrain, mark_constants, rex_constants
 from ..util import pybullet_data
 
 INIT_RACK_POSITION = [1, 0, 0]
-INIT_ORIENTATION = [0, 0, 0, 1]
-OVERHEAT_SHUTDOWN_TORQUE = 54.0
+INIT_ORIENTATION = [0, 0, 1, 0]
+OVERHEAT_SHUTDOWN_TORQUE = 54
 OVERHEAT_SHUTDOWN_TIME = 1.0
 
 LEG_POSITION = ["front_left", "front_right", "rear_left", "rear_right"]
@@ -47,10 +47,10 @@ class Rex:
     def __init__(self,
                  pybullet_client,
                  urdf_root=pybullet_data.getDataPath(),
-                 time_step=0.01,
+                 time_step=0.001,
                  action_repeat=1,
                  self_collision_enabled=False,
-                 motor_velocity_limit=np.inf,
+                 motor_velocity_limit=35,
                  pd_control_enabled=True,
                  accurate_motor_model_enabled=False,
                  remove_default_joint_damping=False,
@@ -113,7 +113,7 @@ class Rex:
         self._motor_direction = [1 for _ in range(self.num_motors)]
         self._observed_motor_torques = np.zeros(self.num_motors)
         self._applied_motor_torques = np.zeros(self.num_motors)
-        self._max_force = 11
+        self._max_force = 22.0
         self._pd_latency = pd_latency
         self._control_latency = control_latency
         self._observation_noise_stdev = observation_noise_stdev
@@ -138,8 +138,8 @@ class Rex:
                                                  kp=self._kp,
                                                  kd=self._kd)
         elif self._pd_control_enabled:
-            self._kp = 8
-            self._kd = 0.3
+            self._kp = 230
+            self._kd = 5
         else:
             self._kp = 1
             self._kd = 1

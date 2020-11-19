@@ -29,9 +29,9 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
     is_terminating = False
 
     def __init__(self,
-                 debug=True,
+                 debug=False,
                  urdf_version=None,
-                 control_time_step=0.005,
+                 control_time_step=0.002,
                  action_repeat=5,
                  control_latency=0,
                  pd_latency=0,
@@ -103,7 +103,7 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
         # (eventually) allow different feedback ranges/action spaces for different signals
         action_max = {
             'ik': 0.4,
-            'ol': 0.01
+            'ol': 0.02
         }
         action_dim_map = {
             'ik': 2,
@@ -134,13 +134,13 @@ class RexWalkEnv(rex_gym_env.RexGymEnv):
             self.backwards = random.choice([True, False])
         else:
             self.backwards = self._backwards
-        step = 0.6
-        period = 0.65
+        step = 0.2
+        period = 0.7
         base_x = self._base_x
         if self.backwards:
-            step = -.3
+            step = -.5
             period = .5
-            base_x = .0
+            base_x = -2.0
         if not self._target_position or self._random_pos_target:
             bound = -3 if self.backwards else 3
             self._target_position = random.uniform(bound//2, bound)

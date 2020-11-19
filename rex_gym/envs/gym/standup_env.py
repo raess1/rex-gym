@@ -37,7 +37,7 @@ class RexStandupEnv(rex_gym_env.RexGymEnv):
                  motor_kp=1.0,
                  motor_kd=0.02,
                  remove_default_joint_damping=False,
-                 render=True,
+                 render=False,
                  num_steps_to_log=1000,
                  env_randomizer=None,
                  log_path=None,

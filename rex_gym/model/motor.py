@@ -2,13 +2,13 @@
 
 import numpy as np
 
-# TODO: set params to match AK10-9
-VOLTAGE_CLIPPING = 40
+# TODO: set params to match mg996r servo
+VOLTAGE_CLIPPING = 50
 # TODO: Clamp the pwm signal instead of the OBSERVED_TORQUE_LIMIT.
-OBSERVED_TORQUE_LIMIT = 54.0
+OBSERVED_TORQUE_LIMIT = 54
 MOTOR_VOLTAGE = 44.0
-MOTOR_RESISTANCE = 90.0
-MOTOR_TORQUE_CONSTANT = 0.095
+MOTOR_RESISTANCE = 0.186
+MOTOR_TORQUE_CONSTANT = 0.0954
 MOTOR_VISCOUS_DAMPING = 0
 MOTOR_SPEED_LIMIT = MOTOR_VOLTAGE / (MOTOR_VISCOUS_DAMPING + MOTOR_TORQUE_CONSTANT)
 
@@ -29,8 +29,8 @@ class MotorModel:
     def __init__(self, motors_num, torque_control_enabled=False, kp=1.2, kd=0):
         self._motors_num = motors_num
         self._torque_control_enabled = torque_control_enabled
-        self._kp = kp
-        self._kd = kd
+        self._kp = 220
+        self._kd = 1.5
         self._resistance = MOTOR_RESISTANCE
         self._voltage = MOTOR_VOLTAGE
         self._torque_constant = MOTOR_TORQUE_CONSTANT

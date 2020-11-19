@@ -8,9 +8,9 @@ class Kinematics:
         self._hip = 0.1359
         self._leg = 0.279523
         self._foot = 0.302314
-        self.y_dist = 0.33377
+        self.y_dist = 0.330
         self.x_dist = self._l
-        self.height = 0.43867
+        self.height = 0.43
         # frame vectors
         self._hip_front_right_v = np.array([self._l / 2, -self._w / 2, 0])
         self._hip_front_left_v = np.array([self._l / 2, self._w / 2, 0])
@@ -63,7 +63,7 @@ class Kinematics:
 
         translation = np.asmatrix([[1, 0, 0, x0],
                                    [0, 1, 0, y0],
-                                   [0, 0, 0, z0],
+                                   [0, 0, 1, z0],
                                    [0, 0, 0, 1]])
         rotation = self.get_Rxyz(roll, pitch, yaw)
         return rotation * translation

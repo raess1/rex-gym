@@ -50,7 +50,7 @@ class RexGymEnv(gym.Env):
     metadata = {"render.modes": ["human", "rgb_array"], "video.frames_per_second": 100}
 
     def __init__(self,
-                 debug=True,
+                 debug=False,
                  urdf_root=pybullet_data.getDataPath(),
                  urdf_version=None,
                  distance_weight=1.0,
@@ -194,7 +194,7 @@ class RexGymEnv(gym.Env):
         self._is_render = render
         self._is_debug = debug
         self._last_base_position = [0, 0, 0]
-        self._last_base_orientation = [0, 0, 0, 3]
+        self._last_base_orientation = [0, 0, 0, 1]
         self._distance_weight = distance_weight
         self._energy_weight = energy_weight
         self._drift_weight = drift_weight
@@ -260,7 +260,7 @@ class RexGymEnv(gym.Env):
         self._ranges = {
             "base_x": (-0.02, 0.02, 0.01),
             "base_y": (-0.007, 0.007, 0),
-            "base_z": (-0.48, 0.43, 0),
+            "base_z": (-0.048, 0.021, 0),
             "roll": (-np.pi / 4, np.pi / 4, 0),
             "pitch": (-np.pi / 4, np.pi / 4, 0),
             "yaw": (-np.pi / 4, np.pi / 4, 0)
@@ -354,6 +354,7 @@ class RexGymEnv(gym.Env):
         self._pybullet_client.resetDebugVisualizerCamera(self._cam_dist, self._cam_yaw,
                                                          self._cam_pitch, [0, 0, 0])
         self._pybullet_client.configureDebugVisualizer(self._pybullet_client.COV_ENABLE_RENDERING, 1)
+        # time.sleep(100)
         return self._get_observation()
 
     def seed(self, seed=None):

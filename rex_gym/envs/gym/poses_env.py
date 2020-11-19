@@ -52,7 +52,7 @@ class RexPosesEnv(rex_gym_env.RexGymEnv):
                  base_roll=None,
                  base_pitch=None,
                  base_yaw=None,
-                 signal_type='ik',
+                 signal_type='ol',
                  terrain_type="plane",
                  terrain_id=None,
                  mark='base'):
@@ -86,8 +86,8 @@ class RexPosesEnv(rex_gym_env.RexGymEnv):
     """
         super(RexPosesEnv,
               self).__init__(urdf_version=urdf_version,
-                             accurate_motor_model_enabled=True,
-                             motor_overheat_protection=True,
+                             accurate_motor_model_enabled=False,
+                             motor_overheat_protection=False,
                              hard_reset=False,
                              motor_kp=motor_kp,
                              motor_kd=motor_kd,

@@ -43,7 +43,7 @@ class RexTurnEnv(rex_gym_env.RexGymEnv):
                  log_path=None,
                  target_orient=None,
                  init_orient=None,
-                 signal_type="ik",
+                 signal_type="ol",
                  terrain_type="plane",
                  terrain_id=None,
                  mark='base'):
